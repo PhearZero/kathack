@@ -1,0 +1,80 @@
+{
+  "name": "kathack",
+  "version": "1.0.0",
+  "description": "Created by Alex Leone, David Nufer, and David Truong, March 2011.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barnstorm-Online/kathack.git"
+  },
+  "keywords": [
+    "Katamari"
+  ],
+  "author": "Alex Leone, David Nufer, and David Truong",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "acquit": "^1.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "chai": "^4.2.0",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0",
+    "jest-canvas-mock": "^1.1.0",
+    "mithril": "^1.1.6",
+    "mocha": "^5.2.0",
+    "mocha-jsdom": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
+    "moduleNameMapper": {
+      "@/([^\\.]*).js$": "<rootDir>/src/$1.js"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/*.{js}"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "projects": [
+      {
+        "displayName": "UnitTests",
+        "sourceType": "module",
+        "testMatch": [
+          "<rootDir>/test/*.js"
+        ]
+      }
+    ]
+  },
+  "esdoc": {
+    "source": "./src",
+    "destination": "./docs",
+    "plugins": [
+      {
+        "name": "esdoc-standard-plugin"
+      }
+    ]
+  }
+}
