@@ -33,22 +33,22 @@ class Game {
     this.onResize()
 
     /* touch events - always on? */
-    document.addEventListener('touchstart', this.touchStart, true)
-    document.addEventListener('touchmove', this.touchMove, true)
-    document.addEventListener('touchend', this.touchEnd, true)
+    document.addEventListener('touchstart', event => this.touchStart(event), true)
+    document.addEventListener('touchmove', event => this.touchMove(event), true)
+    document.addEventListener('touchend', event => this.touchEnd(event), true)
 
     if (this.ballOpts.MOUSEB !== -5) {
       /* mouse buttons */
-      document.addEventListener('mousemove', this.mouseMove, true)
-      document.addEventListener('mousedown', this.mouseDown, true)
-      document.addEventListener('mouseup', this.mouseUp, true)
+      document.addEventListener('mousemove', event => this.mouseMove(event), true)
+      document.addEventListener('mousedown', event => this.mouseDown(event), true)
+      document.addEventListener('mouseup', event => this.mouseUp(event), true)
 
       if (this.ballOpts.MOUSEB === 0) {
         /* block click events. */
-        document.addEventListener('click', this.click, true)
+        document.addEventListener('click', event => this.click(event), true)
       } else if (this.ballOpts.MOUSEB === 2) {
         /* block right-click context menu. */
-        document.addEventListener('contextmenu', this.preventDefault, true)
+        document.addEventListener('contextmenu', event => this.preventDefault(event), true)
       }
     }
   }
