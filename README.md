@@ -3,9 +3,7 @@ Created by Alex Leone, David Nufer, and David Truong, March 2011. Ported to ES6 
 
 ## How To:
 
-Drag this link to your bookmarks bar: [Katamari!](javascript:var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);)
-
-Or copy and paste this url into the location bar on any site:
+Copy and paste this url into the location bar on any site:
 
 ```
 var i,s,ss=['http://kathack.com/js/kh.js','http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'];for(i=0;i!=ss.length;i++){s=document.createElement('script');s.src=ss[i];document.body.appendChild(s);}void(0);
