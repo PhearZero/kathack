@@ -36,7 +36,7 @@
     "mocha-jsdom": "^2.0.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.6.4"
   },
   "jest": {
     "setupFiles": [
